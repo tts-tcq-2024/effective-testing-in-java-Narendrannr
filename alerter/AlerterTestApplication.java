@@ -1,3 +1,4 @@
+public class AlerterTestApplication {
 interface NetworkAlert {
     int sendAlert(float celcius);
 }
@@ -23,7 +24,7 @@ class Alerter {
     }
 }
 
-public class AlerterTestApplication {
+
     public static void main(String[] args) {
         Alerter.alertInCelcius(400.5f);  
         Alerter.alertInCelcius(303.6f);  
