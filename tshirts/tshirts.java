@@ -14,6 +14,7 @@ public class Tshirts {
         assert(size(38) == "M");
         assert(size(40) == "M");
         assert(size(43) == "L");
+        assert(size(49) == "L");
         System.out.println("All is well (maybe!)");
     }
 }
