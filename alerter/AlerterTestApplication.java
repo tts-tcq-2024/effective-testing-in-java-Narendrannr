@@ -3,7 +3,7 @@ interface NetworkAlert {
     int sendAlert(float celcius);
 }
 
-class NetworkAlertStub implements NetworkAlert {
+static class NetworkAlertStub implements NetworkAlert {
     @Override
     public int sendAlert(float celcius) {
         System.out.println("ALERT: Temperature is " + celcius + " celcius");
@@ -11,7 +11,7 @@ class NetworkAlertStub implements NetworkAlert {
     }
 }
 
-class Alerter {
+static class Alerter {
     static int alertFailureCount = 0;
     static NetworkAlert networkAlert = new NetworkAlertStub(); 
 
