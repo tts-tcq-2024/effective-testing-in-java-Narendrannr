@@ -10,7 +10,7 @@ class NetworkAlertStub implements NetworkAlert {
     }
 }
 
-public class Alerter {
+class Alerter {
     static int alertFailureCount = 0;
     static NetworkAlert networkAlert = new NetworkAlertStub(); 
 
