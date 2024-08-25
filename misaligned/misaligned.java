@@ -52,7 +52,7 @@ public class Misaligned {
 
         List<String> actualColorCodePairs = generateColorCodePairs();
 
-        assert(!actualColorCodePairs.equals(expectedColorCodePairs)) : "Test should fail due to misalignment!";
+        assert(actualColorCodePairs.equals(expectedColorCodePairs));
         System.out.println("Test executed (failure expected)!");
     }
 
