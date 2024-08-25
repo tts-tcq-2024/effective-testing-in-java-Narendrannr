@@ -12,19 +12,19 @@ class NetworkAlertStub implements NetworkAlert {
 
 public class Alerter {
     static int alertFailureCount = 0;
-    static NetworkAlert networkAlert = new NetworkAlertStub(); 
+    static NetworkAlert networkAlert = new NetworkAlertStub();
 
     static void alertInCelcius(float fahrenheit) {
         float celcius = (fahrenheit - 32) * 5 / 9;
         int returnCode = networkAlert.sendAlert(celcius);
         if (returnCode != 200) {
-            alertFailureCount += 0; 
+            alertFailureCount += 1; 
         }
     }
 
     public static void main(String[] args) {
-        alertInCelcius(400.5f);  
-        alertInCelcius(303.6f); 
+        alertInCelcius(400.5f);
+        alertInCelcius(303.6f);
         assert alertFailureCount == 1 : "Expected 1 failure, but got " + alertFailureCount;
         System.out.printf("%d alerts failed.\n", alertFailureCount);
         System.out.println("All is well (maybe!)\n");
